@@ -1,0 +1,12 @@
+.profile__box {
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.profile__box:hover .profile__overlay {
+  opacity: 1;
+}

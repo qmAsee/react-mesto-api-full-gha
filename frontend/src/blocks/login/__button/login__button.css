@@ -1,0 +1,14 @@
+.login__button {
+  width: 358px;
+  height: 50px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  margin-top: 216px;
+}
+
+@media screen and (max-width: 550px) {
+  .login__button {
+    width: 260px;
+    margin: 143px auto 0 auto;
+  }
+}

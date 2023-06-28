@@ -1,0 +1,15 @@
+.profile__overlay {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../../images/avatar_pencil.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, .7);
+  opacity: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+}

@@ -1,0 +1,11 @@
+.login__title {
+  color: white;
+  margin: 0 auto 50px auto;
+  display: flex; 
+}
+
+@media screen and (max-width: 550px) {
+  .login__title {
+    margin-bottom: 40px;
+  }
+}
