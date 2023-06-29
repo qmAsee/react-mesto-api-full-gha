@@ -146,7 +146,7 @@ function App() {
   React.useEffect(() => {
     handleTokenCheck();
     return () => {};
-  }, []);
+});
 
   function handleLoginUser(email, password) {
     return auth
