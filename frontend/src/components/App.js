@@ -168,10 +168,11 @@ function App() {
   async function handleRegisterUser(email, password) {
     try {
       const res = await auth.signUp(email, password);
-      if (res.data.email) {
-        navigate("/sign-in", { replace: true });
+      console.log(res)
+      if (res.email) {
         setInfoToolTipOpened(true);
         setIsSuccessful(true);
+        navigate("/sign-in", { replace: true });
       }
     } catch {
       setInfoToolTipOpened(true);
