@@ -169,7 +169,7 @@ function App() {
     try {
       const res = await auth.signUp(email, password);
       console.log(res)
-      if (res.email) {
+      if (res.data.email) {
         setInfoToolTipOpened(true);
         setIsSuccessful(true);
         navigate("/sign-in", { replace: true });
