@@ -1,5 +1,5 @@
 export const authSettings = {
-  url: "http://localhost:3000",
+  url: "https://api.mskupchin-mesto.nomoreparties.sbs",
   headers: {
     "Content-Type": "application/json",
   },
