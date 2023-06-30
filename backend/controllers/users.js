@@ -36,13 +36,17 @@ const createUser = (req, res, next) => {
       if (!user) {
         return next(new NotFound('Не удается создать пользователя'));
       }
-      return res.status(CREATED).send({
-        email: user.email,
-        name: user.name,
-        about: user.about,
-        avatar: user.avatar,
-        _id: user._id,
-      });
+      return res.status(CREATED).send(
+        {
+          data: {
+            email: user.email,
+            name: user.name,
+            about: user.about,
+            avatar: user.avatar,
+            _id: user._id,
+          },
+        },
+      );
     })
     .catch((err) => {
       if (err.name === 'ValidatonError') {
