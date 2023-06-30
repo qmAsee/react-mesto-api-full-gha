@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 84.201.142.212
+IP 84.201.142.212
 
 Frontend https://mskupchin-mesto.nomoreparties.sbs/
 
