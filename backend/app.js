@@ -24,16 +24,17 @@ app.use(express.urlencoded({ extended: true }));
 // req logger before routes
 app.use(requestLogger);
 
-app.post('/signup', createUserValidation, createUser);
-app.post('/signin', createUserValidation, login);
-app.use(auth);
-app.use(errorLogger);
-
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
+
+app.post('/signup', createUserValidation, createUser);
+app.post('/signin', createUserValidation, login);
+app.use(auth);
+app.use(errorLogger);
+
 app.use(router);
 
 app.use(errors());
