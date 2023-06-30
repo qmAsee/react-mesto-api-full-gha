@@ -80,10 +80,7 @@ const deleteCard = (req, res, next) => {
         cardSchema
           .deleteOne(card)
           .then((removedCard) => {
-            res.status(OK).send({
-              data: removedCard,
-              message: 'Карточка удалена',
-            });
+            res.status(OK).send(removedCard);
           })
           .catch(next);
       } else {

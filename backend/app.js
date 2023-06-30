@@ -27,7 +27,6 @@ app.use(requestLogger);
 app.post('/signup', createUserValidation, createUser);
 app.post('/signin', createUserValidation, login);
 app.use(auth);
-
 app.use(errorLogger);
 
 app.use(router);

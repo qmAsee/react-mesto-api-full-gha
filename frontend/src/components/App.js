@@ -94,7 +94,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((user) => user._id === currentUser._id);
+    const isLiked = card.likes.some((id) => id === currentUser._id);
 
     api
       .putLike(card._id, !isLiked)
@@ -103,7 +103,7 @@ function App() {
           state.map((item) => (item._id === card._id ? newCard : item))
         )
       )
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err)); 
   }
 
   function handleCardDelete(card) {
@@ -133,10 +133,10 @@ function App() {
 
     if (jwt) {
       return auth
-        .checkToken(jwt)
+        .checkToken()
         .then((res) => {
           setIsLoggedIn(true);
-          setEmail(res.data.email);
+          setEmail(res.email);
           navigate("/main", { replace: true });
         })
         .catch((err) => console.log(err));

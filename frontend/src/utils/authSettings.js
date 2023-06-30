@@ -1,5 +1,5 @@
 export const authSettings = {
-  url: "https://auth.nomoreparties.co",
+  url: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },

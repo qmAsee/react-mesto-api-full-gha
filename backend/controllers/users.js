@@ -176,14 +176,12 @@ const login = async (req, res, next) => {
           if (!match) {
             throw new Unauthorized('Почта или пароль неверны');
           } else {
-            res.status(OK).send({
-              token: jwt.sign(
-                { _id: user._id },
-                STATUS === 'production' ? JWT_SECRET : 'some-secret-key',
-                { expiresIn: '7d' },
-              ),
-              status: res.statusCode,
-            });
+            const token = jwt.sign(
+              { _id: user._id },
+              STATUS === 'production' ? JWT_SECRET : 'some-secret-key',
+              { expiresIn: '7d' },
+            );
+            res.status(OK).send({ token });
           }
         });
     })

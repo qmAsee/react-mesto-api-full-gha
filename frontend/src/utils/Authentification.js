@@ -12,7 +12,9 @@ class Authentification {
       : Promise.reject(`${res.status} ${res.statusText}`);
   }
 
-  checkToken(token) {
+  checkToken() {
+    const token = localStorage.getItem('jwt');
+
     return fetch(`${this._baseUrl}/users/me`, {
       method: "GET",
       headers: {
