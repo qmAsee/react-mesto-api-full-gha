@@ -71,7 +71,7 @@ class Api {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        avatar: user.avatar,
+        avatar,
       }),
     }).then((res) => this._checkResponse(res));
   }

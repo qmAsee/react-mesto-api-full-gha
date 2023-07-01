@@ -84,7 +84,7 @@ function App() {
     setLoading(true);
 
     api
-      .putAvatar(ava)
+      .putAvatar({ ava })
       .then((data) => {
         setCurrentUser(data);
         closeAllPopups();
