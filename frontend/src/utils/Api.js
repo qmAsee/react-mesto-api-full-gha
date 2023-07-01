@@ -60,16 +60,17 @@ class Api {
     }).then((res) => this._checkResponse(res));
   }
 
-  putAvatar(data) {
+  putAvatar(avatar) {
     const token = localStorage.getItem('jwt');
     
     return fetch(`${this._url}/users/me/avatar`, {
       method: "PATCH",
       headers: {
         authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        data,
+        avatar,
       }),
     }).then((res) => this._checkResponse(res));
   }
