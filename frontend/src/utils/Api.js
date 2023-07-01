@@ -1,3 +1,4 @@
+import user from "../../../backend/models/user.js";
 import { apiSettings } from "./apiSettings.js";
 
 class Api {
@@ -70,7 +71,7 @@ class Api {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        avatar,
+        avatar: user.avatar,
       }),
     }).then((res) => this._checkResponse(res));
   }
