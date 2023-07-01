@@ -69,7 +69,7 @@ class Api {
         authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        avatar: data.avatar,
+        data,
       }),
     }).then((res) => this._checkResponse(res));
   }
