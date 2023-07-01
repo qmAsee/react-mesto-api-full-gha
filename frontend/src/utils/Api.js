@@ -69,9 +69,7 @@ class Api {
         authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        avatar,
-      }),
+      body: JSON.stringify(avatar),
     }).then((res) => this._checkResponse(res));
   }
 
