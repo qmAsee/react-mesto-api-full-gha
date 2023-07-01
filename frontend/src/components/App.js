@@ -85,8 +85,8 @@ function App() {
 
     api
       .putAvatar(ava)
-      .then((data) => {
-        setCurrentUser(data.ava);
+      .then((newAva) => {
+        setCurrentUser(newAva.avatar);
         closeAllPopups();
       })
       .catch((err) => console.log(err))
