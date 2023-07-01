@@ -1,4 +1,3 @@
-import user from "../../../backend/models/user.js";
 import { apiSettings } from "./apiSettings.js";
 
 class Api {
